@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T11:00:00+05:00",
+  "updatedAt": "2026-11-26T21:45:00+05:00",
   "date": "26.11.2026",
   "meeting": "auto",
   "bots": {
@@ -7,20 +7,14 @@
       "state": "boss",
       "note": "В кабинете"
     },
-    "Портфель": {
-      "state": "reading_book",
-      "insight": true,
-      "talking_with": "Развитие",
-      "note": "Книжный клуб"
+    "Путешествия": {
+      "state": "reporting_to_boss",
+      "note": "Доклад"
     },
-    "Новая стоматология": {
+    "Сделки": {
       "state": "reporting_to_boss",
       "carry": "folder",
-      "visits": [
-        "Совет директоров"
-      ],
-      "talking_with": "Дентал Центр",
-      "note": "Обзор идей"
+      "note": "Доклад"
     },
     "Дентал Центр": {
       "state": "busy",
@@ -30,26 +24,32 @@
       "state": "busy",
       "note": "В работе"
     },
-    "Жалобы ДЦ": {
-      "state": "busy",
-      "note": "В работе"
+    "Новая стоматология": {
+      "state": "talking_with",
+      "talking_with": "Совет директоров",
+      "note": "Обсуждение"
     },
-    "Путешествия": {
-      "state": "reporting_to_boss",
-      "note": "Доклад"
+    "Совет директоров": {
+      "state": "talking_with",
+      "talking_with": "Новая стоматология",
+      "note": "Обсуждение"
+    },
+    "Портфель": {
+      "state": "reading_book",
+      "insight": true,
+      "note": "Книжный клуб"
+    },
+    "Жалобы ДЦ": {
+      "state": "reading_book",
+      "note": "Читает"
     },
     "Инстаграм": {
-      "state": "busy",
-      "note": "В работе"
+      "state": "reading_book",
+      "note": "Читает"
     },
     "Эксперименты": {
       "state": "reading_book",
       "note": "Читает"
-    },
-    "Сделки": {
-      "state": "talking_with",
-      "talking_with": "Совет директоров",
-      "note": "Обсуждение"
     },
     "Развитие": {
       "state": "reading_book",
@@ -59,11 +59,6 @@
       "state": "reading_book",
       "insight": true,
       "note": "Читает"
-    },
-    "Совет директоров": {
-      "state": "talking_with",
-      "talking_with": "Сделки",
-      "note": "Обсуждение"
     },
     "Здоровье": {
       "state": "reading_book",
