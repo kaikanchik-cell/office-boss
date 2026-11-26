@@ -1,7 +1,7 @@
 // Офис BOSS — service worker
 // Оболочка (index.html, иконки, manifest) кешируется для работы офлайн.
 // state.json ВСЕГДА берётся из сети (network-first, cache: 'no-store'); кеш — только запасной вариант офлайн.
-const VERSION = "office-boss-v1";
+const VERSION = "office-boss-v2";
 const SHELL = ["./", "./index.html", "./manifest.json", "./icon-192.png", "./icon-512.png",
                "./icon-maskable-512.png", "./apple-touch-icon.png", "./favicon.png"];
 self.addEventListener("install", e => {
@@ -22,9 +22,9 @@ self.addEventListener("fetch", e => {
     );
     return;
   }
-  // оболочка: сначала сеть (чтобы обновления index.html приходили), при офлайне — кеш
+  // оболочка: сначала сеть с ревалидацией (no-cache), чтобы новый index.html приходил сразу; при офлайне — кеш
   e.respondWith(
-    fetch(e.request).then(r => { if (r.ok) { const copy = r.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); } return r; })
+    fetch(e.request, { cache: "no-cache" }).then(r => { if (r.ok) { const copy = r.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); } return r; })
       .catch(() => caches.match(e.request, { ignoreSearch: true }).then(r => r || caches.match("./index.html")))
   );
 });
