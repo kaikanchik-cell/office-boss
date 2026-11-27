@@ -1,45 +1,43 @@
 {
-  "updatedAt": "2026-11-26T21:45:00+05:00",
-  "date": "26.11.2026",
+  "updatedAt": "2026-11-27T21:50:00+05:00",
+  "date": "27.11.2026",
   "meeting": "auto",
   "bots": {
     "BOSS": {
       "state": "boss",
       "note": "В кабинете"
     },
-    "Путешествия": {
-      "state": "reporting_to_boss",
-      "note": "Доклад"
-    },
     "Сделки": {
       "state": "reporting_to_boss",
       "carry": "folder",
+      "note": "Доклад"
+    },
+    "Путешествия": {
+      "state": "busy",
+      "note": "В работе"
+    },
+    "Жалобы ДЦ": {
+      "state": "reporting_to_boss",
       "note": "Доклад"
     },
     "Дентал Центр": {
       "state": "busy",
       "note": "В работе"
     },
-    "Кофе Про": {
-      "state": "busy",
-      "note": "В работе"
-    },
-    "Новая стоматология": {
-      "state": "talking_with",
-      "talking_with": "Совет директоров",
-      "note": "Обсуждение"
-    },
-    "Совет директоров": {
-      "state": "talking_with",
-      "talking_with": "Новая стоматология",
-      "note": "Обсуждение"
-    },
     "Портфель": {
       "state": "reading_book",
       "insight": true,
       "note": "Книжный клуб"
     },
-    "Жалобы ДЦ": {
+    "Кофе Про": {
+      "state": "reading_book",
+      "note": "Читает"
+    },
+    "Новая стоматология": {
+      "state": "reading_book",
+      "note": "Читает"
+    },
+    "Совет директоров": {
       "state": "reading_book",
       "note": "Читает"
     },
@@ -57,7 +55,6 @@
     },
     "Обучение партнёров": {
       "state": "reading_book",
-      "insight": true,
       "note": "Читает"
     },
     "Здоровье": {
